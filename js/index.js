@@ -55,23 +55,22 @@ window.onload = function () {
     			e.target.style.background = "url('img/2.jpg')"
     			e.target.style.backgroundSize = "30px 30px"
     			levelMath++
-
     		}else if(e.target.getAttribute("sign") == "ok"){
     			e.target.setAttribute("sign","no")
     			e.target.style.background = "url('img/3.jpg')"
     			e.target.style.backgroundSize = "30px 30px"
     			levelMath--
-
     		}else if(e.target.getAttribute("sign") == "no"){
     			e.target.setAttribute("sign","")
     			e.target.style.background = ""
     			e.target.style.backgroundSize = "30px 30px"
+    			console.log('no',levelMath,sum)
 
     		}else if(e.target.getAttribute("sign") == ""){
     			e.target.setAttribute("sign","ok")
     			e.target.style.background = "url('img/2.jpg')"
     			e.target.style.backgroundSize = "30px 30px"
-    			levelMath
+    			levelMath++
     		}
     		span.innerHTML =  sum - levelMath
     	}
